@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="HandBrake.jnlp">
+  <information>
+    <title>HandBrake</title>
+    <vendor>The Game</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="HandBrake.jar" size="679824" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2176841" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="HandBrake" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="handbrake.HandBrake"  name="HandBrake" />
+  <update check="always"/>
+</jnlp>

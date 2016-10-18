@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="687.0" prefWidth="600.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="handbrake.PresetController">
+   <children>
+      <Label layoutX="225.0" layoutY="14.0" text="Add New Preset" textFill="#fafafa">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutY="139.0" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #424242;">
+         <children>
+            <Label layoutX="28.0" layoutY="14.0" text="Video Settings" textFill="#fafafa">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="55.0" text="Encoder:" textFill="#fafafa" />
+            <Label layoutX="28.0" layoutY="90.0" text="Resolution:" textFill="#fafafa" />
+            <Label layoutX="28.0" layoutY="131.0" text="Video Bitrate:" textFill="#fafafa" />
+            <Label layoutX="330.0" layoutY="55.0" text="Frame Rate:" textFill="#fafafa" />
+            <Label layoutX="330.0" layoutY="90.0" text="Aspect Ratio:" textFill="#fafafa" />
+            <JFXComboBox layoutX="141.0" layoutY="50.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #616161;" />
+            <JFXComboBox layoutX="141.0" layoutY="85.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #616161;" />
+            <JFXComboBox layoutX="141.0" layoutY="126.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #616161;" />
+            <JFXComboBox layoutX="439.0" layoutY="50.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #616161;" />
+            <JFXComboBox layoutX="439.0" layoutY="85.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #616161;" />
+         </children>
+      </Pane>
+      <Pane layoutY="354.0" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #424242;">
+         <children>
+            <Label layoutX="33.0" layoutY="26.0" text="Audio Settings" textFill="#fafafa">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="71.0" text="Encoder:" textFill="#fafafa" />
+            <Label layoutX="33.0" layoutY="115.0" text="Channels:" textFill="#fafafa" />
+            <Label layoutX="330.0" layoutY="71.0" text="Sample Rate:" textFill="#fafafa" />
+            <Label layoutX="330.0" layoutY="115.0" text="Audio Bitrate:" textFill="#fafafa" />
+            <JFXComboBox layoutX="125.0" layoutY="66.0" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #616161;" />
+            <JFXComboBox layoutX="125.0" layoutY="110.0" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #616161;" />
+            <JFXComboBox layoutX="441.0" layoutY="66.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #616161;" />
+            <JFXComboBox layoutX="441.0" layoutY="110.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #616161;" />
+         </children>
+      </Pane>
+      <Pane layoutY="578.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #424242;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="37.0" layoutY="35.0" style="-fx-background-color: #039BE5;" text="Restore Defaults" textFill="WHITE" />
+            <JFXButton fx:id="preset_cancel_btn" buttonType="RAISED" layoutX="501.0" layoutY="35.0" onAction="#cutCancelButton" style="-fx-background-color: #039BE5;" text="Cancel" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" layoutX="448.0" layoutY="35.0" style="-fx-background-color: #039BE5;" text="OK" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="32.0" layoutY="68.0" text="Profile" textFill="#fafafa" />
+      <ComboBox layoutX="96.0" layoutY="63.0" prefHeight="31.0" prefWidth="287.0" style="-fx-background-color: #424242;" />
+      <JFXButton buttonType="RAISED" layoutX="402.0" layoutY="63.0" style="-fx-background-color: #424242;" text="Save as..." textFill="#fafafa" />
+      <JFXButton buttonType="RAISED" layoutX="498.0" layoutY="63.0" style="-fx-background-color: #424242;" text="Delete" textFill="#fafafa" />
+   </children>
+</AnchorPane>

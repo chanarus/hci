@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="1558.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="handbrake.FXMLDocumentController">
+    <children>
+      <JFXButton fx:id="add_source_btn" buttonType="RAISED" layoutX="29.0" layoutY="14.0" onAction="#addSourceButtonAction" ripplerFill="#2196f3" style="-fx-background-color: #424242; -fx-border-radius: 1px;" text="Add Video" textFill="#fafafa">
+         <tooltip>
+            <Tooltip text="Add a new video" />
+         </tooltip>
+         <effect>
+            <ColorAdjust />
+         </effect></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="128.0" layoutY="14.0" ripplerFill="#2298f2" style="-fx-border-radius: 1px; -fx-background-color: #424242; -fx-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);" text="Add to Queue" textFill="#fafafa">
+         <tooltip>
+            <Tooltip text="Add videos to the queue" />
+         </tooltip></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="250.0" layoutY="14.0" ripplerFill="#2196f3" style="-fx-border-radius: 1px; -fx-background-color: #424242;" text="Show Queue" textFill="#fafafa" />
+      <JFXButton buttonType="RAISED" layoutX="368.0" layoutY="14.0" ripplerFill="#2196f3" style="-fx-background-color: #424242; -fx-border-radius: 1px;" text="Active Log" textFill="#fafafa" />
+      <JFXButton fx:id="cut_btn" buttonType="RAISED" layoutX="474.0" layoutY="14.0" onAction="#cutButtonAction" ripplerFill="#2ba3ff" style="-fx-background-color: #424242; -fx-border-radius: 1px;" text="Cut" textFill="#fafafa">
+         <tooltip>
+            <Tooltip text="Cut a section of a video" />
+         </tooltip>
+      </JFXButton>
+      <Label layoutX="36.0" layoutY="570.0" text="Profile" textFill="#fafafa">
+         <tooltip>
+            <Tooltip text="Output format of the video" />
+         </tooltip>
+      </Label>
+      <Label layoutX="36.0" layoutY="628.0" text="Destination" textFill="#fafafa">
+         <tooltip>
+            <Tooltip text="Destination of the out put file" />
+         </tooltip>
+      </Label>
+      <JFXComboBox fx:id="profile_combo" layoutX="133.0" layoutY="565.0" prefHeight="31.0" prefWidth="550.0" promptText="mp4" style="-fx-background-color: #FAFAFA; -fx-font-color: #FAFAFA;" />
+      <JFXButton fx:id="browse_btn" buttonType="RAISED" layoutX="711.0" layoutY="623.0" onAction="#browseOutputButtonAction" ripplerFill="#259ffc" style="-fx-background-color: #424242;" text="Browse" textFill="#fafafa" />
+      <JFXButton buttonType="RAISED" layoutX="794.0" layoutY="623.0" onAction="#openOutputButtonAction" ripplerFill="#2196f3" style="-fx-background-color: #424242;" text="Open Folder" textFill="#fafafa">
+         <tooltip>
+            <Tooltip text="Open output destination" />
+         </tooltip></JFXButton>
+      <TabPane layoutX="29.0" layoutY="147.0" prefHeight="403.0" prefWidth="899.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #BDBDBD;" text="Picture">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FAFAFA;">
+                     <children>
+                        <Label layoutX="45.0" layoutY="26.0" text="Resolutiomn">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="65.0" text="Width" />
+                        <Label layoutX="140.0" layoutY="65.0" text="Height" />
+                        <Label layoutX="28.0" layoutY="109.0" text="Anamorphic" />
+                        <Label layoutX="28.0" layoutY="152.0" text="Modulus" />
+                        <JFXComboBox fx:id="anamorphic" layoutX="129.0" layoutY="104.0" prefHeight="31.0" prefWidth="97.0" promptText="Loose" style="-fx-background-color: #E0E0E0;" />
+                        <JFXComboBox fx:id="modulus" layoutX="129.0" layoutY="147.0" prefHeight="31.0" prefWidth="96.0" promptText="2" style="-fx-background-color: #E0E0E0;" />
+                        <Label layoutX="351.0" layoutY="28.0" text="Cropping">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXRadioButton layoutX="351.0" layoutY="65.0" text="Automatic" />
+                        <JFXRadioButton layoutX="351.0" layoutY="94.0" text="Custom" />
+                        <ImageView fitHeight="216.0" fitWidth="259.0" layoutX="589.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/thegame.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXButton buttonType="RAISED" layoutX="45.0" layoutY="262.0" ripplerFill="#30abf2" style="-fx-background-color: #E0E0E0; -fx-border-radius: 1px;" text="Apply" />
+                        <JFXButton buttonType="RAISED" layoutX="129.0" layoutY="262.0" ripplerFill="#30aaf1" style="-fx-background-color: #E0E0E0; -fx-border-radius: 1px;" text="Default" />
+                        <JFXTextField layoutX="78.0" layoutY="57.0" maxWidth="53.0" minWidth="53.0" prefHeight="37.0" prefWidth="53.0" />
+                        <JFXTextField layoutX="197.0" layoutY="57.0" maxWidth="48.0" minWidth="48.0" prefHeight="37.0" prefWidth="48.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+               <tooltip>
+                  <Tooltip text="Change the resolution of the video" />
+               </tooltip>
+          </Tab>
+          <Tab style="-fx-background-color: #BDBDBD;" text="Video">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FAFAFA;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="14.0" text="Video">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="54.0" text="Video Codec" />
+                        <Label layoutX="25.0" layoutY="92.0" text="Frame Rate (FPS)" />
+                        <JFXComboBox fx:id="codec" layoutX="163.0" layoutY="49.0" promptText="H.264 (x264)" style="-fx-background-color: #E0E0E0;" />
+                        <JFXComboBox fx:id="fps" layoutX="163.0" layoutY="87.0" promptText="Same as source" style="-fx-background-color: #E0E0E0;" stylesheets="@../css/main.css" />
+                        <JFXRadioButton layoutX="157.0" layoutY="129.0" text="Constant framerate" />
+                        <JFXRadioButton layoutX="157.0" layoutY="150.0" text="Peak framerate" />
+                        <Label layoutX="25.0" layoutY="192.0" text="Quality">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXRadioButton layoutX="18.0" layoutY="225.0" text="Constant Quality" />
+                        <JFXSlider layoutX="30.0" layoutY="255.0" prefHeight="18.0" prefWidth="286.0" />
+                        <JFXTextField layoutX="173.0" layoutY="277.0" maxWidth="103.0" minWidth="103.0" prefHeight="37.0" prefWidth="103.0" />
+                        <JFXCheckBox layoutX="29.0" layoutY="322.0" text="2-Pass Encoding" />
+                        <JFXCheckBox layoutX="183.0" layoutY="322.0" text="Turbo first pass" />
+                        <JFXRadioButton layoutX="19.0" layoutY="285.0" text="Avg Bitrate (kbps)" />
+                        <Label layoutX="442.0" layoutY="14.0" text="Optimice Video">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #BDBDBD;" text="Filters">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FAFAFA;">
+                     <children>
+                        <Label layoutX="30.0" layoutY="24.0" text="Filters">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="63.0" text="Detelecine:" />
+                        <Label layoutX="30.0" layoutY="103.0" text="Deinterlace:" />
+                        <JFXComboBox layoutX="139.0" layoutY="58.0" />
+                        <JFXRadioButton layoutX="133.0" layoutY="103.0" text="Deinterlace" />
+                        <JFXRadioButton layoutX="260.0" layoutY="103.0" text="Decomb" />
+                        <JFXComboBox layoutX="139.0" layoutY="130.0" />
+                        <Label layoutX="30.0" layoutY="191.0" text="Denoise" />
+                        <JFXComboBox layoutX="139.0" layoutY="186.0" />
+                        <Label layoutX="30.0" layoutY="247.0" text="Deblock" />
+                        <JFXSlider layoutX="125.0" layoutY="249.0" />
+                        <JFXCheckBox layoutX="117.0" layoutY="283.0" text="Grayscale" />
+                        <Label layoutX="288.0" layoutY="248.0" text="Off" />
+                        <ImageView fitHeight="226.0" fitWidth="357.0" layoutX="477.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/thegame.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXButton buttonType="RAISED" layoutX="477.0" layoutY="294.0" ripplerFill="#22b4e4" style="-fx-background-color: #E0E0E0; -fx-border-radius: 1px;" text="Apply" />
+                        <JFXButton buttonType="RAISED" layoutX="563.0" layoutY="294.0" ripplerFill="#2d92e4" style="-fx-background-color: #E0E0E0; -fx-border-radius: 1px;" text="Default" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-background-color: #BDBDBD;" text="Audio">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FAFAFA;">
+                     <children>
+                        <Label layoutX="49.0" layoutY="30.0" text="Audio Track">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" layoutX="49.0" layoutY="93.0" style="-fx-background-color: #E0E0E0;" text="Add Track" />
+                        <JFXButton buttonType="RAISED" layoutX="192.0" layoutY="93.0" style="-fx-background-color: #E0E0E0;" text="Cancel" />
+                        <JFXButton buttonType="RAISED" layoutX="732.0" layoutY="15.0" style="-fx-background-color: #E0E0E0;" text="Set to Default" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-background-color: #BDBDBD;" text="Subtitles">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FAFAFA;">
+                     <children>
+                        <Label layoutX="35.0" layoutY="207.0" text="Video file" />
+                        <Label layoutX="35.0" layoutY="246.0" text="Subtitle file" />
+                        <Label layoutX="35.0" layoutY="14.0" text="Subtitle Tracks">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="49.0" style="-fx-background-color: #9E9E9E;" text="Add Tracks" />
+                        <JFXButton buttonType="RAISED" layoutX="140.0" layoutY="49.0" style="-fx-background-color: #9E9E9E;" text="Import STR" />
+                        <JFXButton buttonType="RAISED" layoutX="250.0" layoutY="49.0" style="-fx-background-color: #9E9E9E;" text="Clear" />
+                        <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="294.0" style="-fx-background-color: #9E9E9E;" text="Apply" />
+                        <ImageView fitHeight="62.0" fitWidth="559.0" layoutX="156.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/sub1.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-background-color: #BDBDBD;" text="Chapters">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FAFAFA;">
+                     <children>
+                        <Label layoutX="36.0" layoutY="24.0" text="Chapter Makers">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" layoutX="642.0" layoutY="49.0" style="-fx-background-color: #E0E0E0;" text="Import" />
+                        <JFXButton buttonType="RAISED" layoutX="721.0" layoutY="49.0" style="-fx-background-color: #E0E0E0;" text="Export" />
+                        <JFXCheckBox checkedColor="#1990e4" layoutX="53.0" layoutY="54.0" text="Create Chapter Maker" />
+                        <TableView layoutX="45.0" layoutY="105.0" prefHeight="200.0" prefWidth="745.0">
+                          <columns>
+                            <TableColumn prefWidth="143.0" text="Chapter Number" />
+                            <TableColumn minWidth="7.0" prefWidth="173.0" text="Duration" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="937.0" layoutY="147.0" prefHeight="403.0" prefWidth="230.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <Label layoutX="75.0" layoutY="14.0" text="Presets">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="109.0" layoutY="39.0" startX="-100.0" />
+            <Line endX="100.0" layoutX="115.0" layoutY="346.0" startX="-100.0" />
+            <JFXButton layoutX="28.0" layoutY="58.0" text="Univercial" />
+            <JFXButton layoutX="28.0" layoutY="89.0" text="iPod" />
+            <JFXButton layoutX="28.0" layoutY="120.0" text="iPad" />
+            <JFXButton layoutX="28.0" layoutY="151.0" text="Apple TV1" />
+            <JFXButton layoutX="28.0" layoutY="186.0" text="Apple TV2" />
+            <JFXButton layoutX="28.0" layoutY="227.0" text="Android" />
+            <JFXButton layoutX="28.0" layoutY="270.0" text="Windows phone" />
+            <JFXButton fx:id="add_preset_btn" layoutX="11.0" layoutY="358.0" onAction="#addPresetButtonAction" text="Add" />
+            <JFXButton layoutX="72.0" layoutY="358.0" text="Remove" />
+            <JFXButton layoutX="159.0" layoutY="358.0" text="Setting" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="convert_btn" buttonType="RAISED" layoutX="1006.0" layoutY="589.0" onAction="#convertButtonAction" prefHeight="62.0" prefWidth="217.0" ripplerFill="#1a92ee" style="-fx-background-color: #424242;" text="CONVERT" textFill="#18a5fc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1196.0" layoutY="60.0" text="Preview" textFill="#fafafa">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="29.0" layoutY="60.0" prefHeight="74.0" prefWidth="1139.0" style="-fx-background-color: #424242;">
+         <children>
+            <Label layoutX="83.0" layoutY="27.0" text="Source Name:" textFill="#fafafa" />
+            <Label layoutX="818.0" layoutY="27.0" text="Source Format:" textFill="#fafafa" />
+            <ImageView fitHeight="53.0" fitWidth="61.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/video.JPG" />
+               </image>
+            </ImageView>
+            <Label fx:id="source_name_label" layoutX="189.0" layoutY="27.0" textFill="#fafafa" />
+            <Label fx:id="source_format_label" layoutX="931.0" layoutY="27.0" textFill="#fafafa" />
+         </children>
+      </Pane>
+      <TextField fx:id="destination_txt" layoutX="133.0" layoutY="623.0" prefHeight="31.0" prefWidth="550.0" style="-fx-background-color: #FAFAFA;" />
+      <BorderPane fx:id="bp" layoutX="1182.0" layoutY="85.0" prefHeight="375.0" prefWidth="361.0">
+         <center>
+            <MediaView fx:id="mv" fitHeight="365.0" fitWidth="365.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <JFXButton buttonType="RAISED" layoutX="1251.0" layoutY="482.0" onAction="#play" style="-fx-background-color: #039BE5;" text="Play" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="1386.0" layoutY="482.0" onAction="#stop" style="-fx-background-color: #039BE5;" text="Stop" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="1312.0" layoutY="482.0" onAction="#pause" style="-fx-background-color: #039BE5;" text="Pause" textFill="WHITE" />
+    </children>
+</AnchorPane>

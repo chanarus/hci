@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="326.0" prefWidth="600.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="handbrake.ConvertController">
+   <children>
+      <Label layoutX="259.0" layoutY="14.0" text="Progress" textFill="#fafafa">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutY="222.0" prefHeight="76.0" prefWidth="600.0" style="-fx-background-color: #424242;">
+         <children>
+            <JFXButton fx:id="progress_stp_btn" buttonType="RAISED" layoutX="504.0" layoutY="23.0" onAction="#progressStopButton" ripplerFill="#2a65e4" style="-fx-background-color: #29B6F6;" text="Stop" textFill="WHITE" />
+            <JFXButton fx:id="progress_pause_btn" buttonType="RAISED" layoutX="430.0" layoutY="23.0" onAction="#progressPauseButton" ripplerFill="#29aaeb" style="-fx-background-color: #29B6F6;" text="Pause" textFill="WHITE" />
+            <Label layoutX="32.0" layoutY="28.0" text="After done" textFill="#fafafa" />
+            <JFXComboBox layoutX="111.0" layoutY="23.0" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #212121;" />
+            <JFXCheckBox checkedColor="#287eda" layoutX="230.0" layoutY="28.0" text="Open output folder" textFill="#fafafa" unCheckedColor="#fafafa" />
+         </children>
+      </Pane>
+      <ProgressBar fx:id="progerss_bar" layoutX="32.0" layoutY="117.0" onMouseClicked="#increase" prefHeight="23.0" prefWidth="536.0" progress="0.0" />
+      <Label layoutX="32.0" layoutY="177.0" text="Elapsed time :" textFill="#fafafa" />
+      <Label layoutX="341.0" layoutY="177.0" text="Remaining time :" textFill="#fafafa" />
+      <Label layoutX="34.0" layoutY="74.0" text="File name :" textFill="#fafafa" />
+      <ListView layoutX="126.0" layoutY="74.0" prefHeight="21.0" prefWidth="139.0" style="-fx-background-color: #222222;" />
+      <Label layoutX="32.0" layoutY="153.0" text="Progress:" textFill="#fafafa" />
+      <Label fx:id="precentege" layoutX="107.0" layoutY="153.0" text="jhfgjdgfs" textFill="#fafafa" />
+   </children>
+</AnchorPane>

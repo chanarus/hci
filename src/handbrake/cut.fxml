@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="600.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="handbrake.CutController">
+   <children>
+      <Label layoutX="27.0" layoutY="22.0" text="Clip" textFill="#fafafa">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="329.0" fitWidth="661.0" layoutX="80.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/thegame.jpg" />
+         </image>
+      </ImageView>
+      <Slider layoutX="80.0" layoutY="408.0" prefHeight="18.0" prefWidth="439.0" />
+      <Pane layoutY="580.0" prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #424242;">
+         <children>
+            <JFXButton fx:id="cut_cancel_btn" buttonType="RAISED" layoutX="508.0" layoutY="18.0" onAction="#cutCancelButton" ripplerFill="#288dae" style="-fx-background-color: #0288D1;" text="Cancel" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" layoutX="458.0" layoutY="18.0" ripplerFill="#2693c9" style="-fx-background-color: #0288D1;" text="Ok" textFill="WHITE" />
+            <JFXCheckBox checkedColor="#1c69d3" layoutX="14.0" layoutY="23.0" text="Merge in to one file" textFill="#fafafa" unCheckedColor="#fafafa">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </Pane>
+      <Pane layoutY="449.0" prefHeight="119.0" prefWidth="600.0" style="-fx-background-color: #424242;">
+         <children>
+            <ImageView fitHeight="66.0" fitWidth="90.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/video.JPG" />
+               </image>
+            </ImageView>
+            <ProgressBar layoutX="100.0" layoutY="70.0" prefHeight="23.0" prefWidth="470.0" progress="1.0" />
+            <Label layoutX="100.0" layoutY="27.0" text="Start :" textFill="#fafafa" />
+            <Label layoutX="283.0" layoutY="27.0" text="End :" textFill="#fafafa" />
+            <Label layoutX="448.0" layoutY="27.0" text="Duration :" textFill="#fafafa" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
