@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="HandBrake.jar" size="679824" download="eager" />
+    <jar href="HandBrake.jar" size="682861" download="eager" />
     <jar href="lib\jfoenix.jar" size="2176841" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="HandBrake" >

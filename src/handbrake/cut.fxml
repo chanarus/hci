@@ -25,7 +25,7 @@
       <Pane layoutY="580.0" prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #424242;">
          <children>
             <JFXButton fx:id="cut_cancel_btn" buttonType="RAISED" layoutX="508.0" layoutY="18.0" onAction="#cutCancelButton" ripplerFill="#288dae" style="-fx-background-color: #0288D1;" text="Cancel" textFill="WHITE" />
-            <JFXButton buttonType="RAISED" layoutX="458.0" layoutY="18.0" ripplerFill="#2693c9" style="-fx-background-color: #0288D1;" text="Ok" textFill="WHITE" />
+            <JFXButton fx:id="cut_ok_btn" buttonType="RAISED" layoutX="458.0" layoutY="18.0" onAction="#cutOkButton" ripplerFill="#2693c9" style="-fx-background-color: #0288D1;" text="Ok" textFill="WHITE" />
             <JFXCheckBox checkedColor="#1c69d3" layoutX="14.0" layoutY="23.0" text="Merge in to one file" textFill="#fafafa" unCheckedColor="#fafafa">
                <font>
                   <Font size="12.0" />

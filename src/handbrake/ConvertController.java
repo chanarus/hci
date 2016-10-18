@@ -7,13 +7,17 @@ package handbrake;
 
 import static java.lang.Thread.sleep;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
@@ -77,9 +81,19 @@ public class ConvertController implements Initializable {
     }
     
     @FXML
-    public void progressStopButton(ActionEvent event) {        
-        Stage stage = (Stage) progress_stp_btn.getScene().getWindow();
-        stage.close();
+    public void progressStopButton(ActionEvent event) {      
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText("Look, a Confirmation Dialog");
+        alert.setContentText("Are you ok with this?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            Stage stage = (Stage) progress_stp_btn.getScene().getWindow();
+            stage.close();
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
     }
     
     @FXML
